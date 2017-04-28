@@ -33,7 +33,7 @@ else:
 
 ''' Move the C_CameraSolver_UI'''
 #Move mouse to center
-p.moveTo(1230, 438)
+p.moveTo((screenSize[0] * 0.4), (screenSize[1] * 0.3))
 
 
 
