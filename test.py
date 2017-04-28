@@ -34,7 +34,7 @@ else:
 ''' Move the C_CameraSolver_UI'''
 #Move mouse to center
 p.moveTo(1230, 438)
-#lol
+
 
 
 #Hold down Ctrl + Alt
