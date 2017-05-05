@@ -1,0 +1,1 @@
+PM_testFolder = 'C:\\Users\\twr_000\\PycharmProjects\\GuiAutomation\\Test_Images_Home\\'

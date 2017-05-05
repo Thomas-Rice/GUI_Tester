@@ -1,19 +1,20 @@
 import pyautogui as p
 import ExceptionWrappedTools as tool
-import Evaluation as EV
-import Utilities as UT
 
-import time
+from paths_and_messages import *
 
 
 def guiTest():
-    testFolder = 'C:\\Users\\thomas.rice\\PycharmProjects\\GUI_Tester\\Test_Images\\'
+    #import path from paths_and_messages
+    testFolder = PM_testFolder
     #Implement a failsafe pause
     p.PAUSE = 0.25
 
     # print('SCREEN COORDINATES ARE', p.locateCenterOnScreen('C:\\Users\\twr_000\\Desktop\\Horizon_Tool.png'))
 
     screenSize = p.size()
+
+
     '''
 
 
@@ -82,22 +83,3 @@ def guiTest():
     #Release Ctrl + Alt
     p.keyUp('ctrl')
     p.keyUp('alt')
-
-
-
-
-
-
-UT.openApplication()
-UT.time.sleep(10)
-UT.checkApplicationIsOpen()
-UT.openFile()
-
-time.sleep(5)
-guiTest()
-
-EV.captureViewer()
-bbox = EV.getFinalImageBBOX('HorizonTool')
-EV.evaluate(bbox, (414, 139, 514, 390),'HorizonTool Drag Move')
-
-UT.closeApplication()

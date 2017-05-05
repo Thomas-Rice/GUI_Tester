@@ -1,8 +1,8 @@
 import pyautogui as p
 import ExceptionWrappedTools as tool
+from paths_and_messages import *
 
-'TO DO - pass in region and filename'
-testFolder = 'C:\\Users\\thomas.rice\\PycharmProjects\\GUI_Tester\\Test_Images\\'
+testFolder = PM_testFolder
 
 def captureViewer():
     try:
@@ -18,12 +18,15 @@ def getFinalImageBBOX(imageName):
 
        return bbox
 
+
+
 def evaluate(result, reference, testName):
     if reference != result:
-        message = ('Test Failed - Image not the same as reference \n' + testName)
-        p.alert(message, 'Test Result', button='OK')
-        raise Exception(message)
+        message = ('Image not the same as reference \n' + testName)
+        # p.alert(message, 'Test Result', button='OK')
+        return (False, message)
     else:
         message = ('Test Passed!!! - ' + testName)
         print(message)
-        p.alert(message, 'Test Result', button='OK')
+        # p.alert(message, 'Test Result', button='OK')
+        return (True, message)
