@@ -1,33 +1,37 @@
 import baseTest
+import importlib
+
 
 # TODO - Run through a list of tests and execute them
-import HorizonTool_Test as Test_1
+
 tests = ['HorizonTool_Test']
 
+listOfTests = []
 
-import importlib
+
 for file in tests:
-    importlib.import_module(file)
+    i = importlib.import_module(file)
+    listOfTests.append(i)
 
 
 
 
+#Stack of functions to call from baseTest
+def runExecutionStack(t):
+    t.setup()
+    t.execute()
+    t.evaluate()
+    t.tearDown()
 
 
-# #Stack of functions to call from baseTest
-# def runExecutionStack(t):
-#     t.setup()
-#     t.execute()
-#     t.evaluate()
-#     t.tearDown()
-#
-#
-# def reportTestRun():
-#     #TODO - Report the results of all the tests
-#     pass
-#
-#
+def reportTestRun():
+    #TODO - Report the results of all the tests
+    pass
+
+
 # #Run all the tests in the sequence
-# for test in tests:
-#     testToRun = baseTest.baseTest(test)
-#     runExecutionStack(testToRun)
+for i in range(0, len(tests)):
+    testToRun = baseTest.baseTest(listOfTests[i])
+    runExecutionStack(testToRun)
+
+
