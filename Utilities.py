@@ -8,14 +8,16 @@ import time
 testFolder = PM_testFolder
 screenSize = p.size()
 
-
+# X = 960, Y = 1420
 # X = 641, Y = 1066
-def openApplication(X = 960, Y = 1420):
+def openApplication(X = 641, Y = 1066):
     # TODO  check all the locations of the Nuke symbol - if there is more than one then require corods. If not then use the locateCenter func
     p.click(X, Y, 2, 0.1)
 
+
+# X = 3408, Y = 18
 # X = 1887, Y = 8
-def closeApplication(X = 3408, Y = 18):
+def closeApplication(X = 1887, Y = 8):
     #Click the Close Button
     p.click(X, Y)
 

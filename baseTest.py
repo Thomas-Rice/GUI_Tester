@@ -21,7 +21,7 @@ class baseTest():
     def evaluate(self):
         EV.captureViewer()
         bbox = EV.getFinalImageBBOX('HorizonTool')
-        EV.evaluate(bbox, (669, 182, 1028, 516),'HorizonTool Drag Move')
+        EV.evaluate(bbox, (328, 162, 689, 345),'HorizonTool Drag Move')
 
     def tearDown(self):
         UT.closeApplication()
