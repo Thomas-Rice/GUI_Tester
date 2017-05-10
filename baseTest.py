@@ -1,7 +1,7 @@
+import time
+
 import Evaluation as EV
 import Utilities as UT
-
-import time
 
 
 class baseTest():
@@ -33,7 +33,8 @@ class baseTest():
 
 if __name__ == '__main__':
     # Needs to be changed so we import all tests in the future.
-    import HorizonTool_Test as Test_1
+    from TestUnits import HorizonTool_Test as Test_1
+
     t = baseTest(Test_1)
     t.setup()
     t.execute()
