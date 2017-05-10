@@ -5,6 +5,7 @@ from paths_and_messages import *
 import sys
 import os
 import glob
+import time
 
 
 tests = []
@@ -28,11 +29,11 @@ for file in tests:
 
 
 #Stack of functions to call from baseTest
-def runExecutionStack(t):
-    t.setup()
-    t.execute()
-    t.evaluate()
-    t.tearDown()
+def runExecutionStack(testObject, testName):
+    testObject.setup()
+    testObject.execute()
+    testObject.evaluate(testName, PM_bboxes[testName])
+    testObject.tearDown()
 
 
 def reportTestRun():
@@ -43,10 +44,8 @@ def run():
     #Run all the tests in the sequence
     for i in tests:
         testToRun = baseTest.baseTest(importedTests[i])
-        runExecutionStack(testToRun)
-
-def test():
-    print('yo')
+        runExecutionStack(testToRun, i)
+        time.sleep(5)
 
 
 def returnTestObjects():

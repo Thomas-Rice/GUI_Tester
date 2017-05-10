@@ -18,10 +18,12 @@ class baseTest():
     def execute(self):
         self.testCommands.guiTest()
 
-    def evaluate(self):
+    def evaluate(self, test, refBBOX):
         EV.captureViewer()
-        bbox = EV.getFinalImageBBOX('HorizonTool')
-        EV.evaluate(bbox, (328, 162, 689, 345),'HorizonTool Drag Move')
+        bbox = EV.getFinalImageBBOX(test)
+        # print(bbox)
+        EV.evaluate(bbox, refBBOX, test)
+        # (328, 162, 689, 345)
 
     def tearDown(self):
         UT.closeApplication()

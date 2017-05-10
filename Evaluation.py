@@ -14,7 +14,7 @@ def captureViewer():
 
 
 def getFinalImageBBOX(imageName):
-       bbox = tool.locateOnScreen(imageName , testFolder + 'HorizonTool.png')
+       bbox = tool.locateOnScreen(imageName , testFolder + imageName + '.png')
 
        return bbox
 
@@ -22,7 +22,8 @@ def getFinalImageBBOX(imageName):
 
 def evaluate(result, reference, testName):
     if reference != result:
-        message = ('Image not the same as reference \n' + testName)
+        message = ('Test Failed :( -- Image not the same as reference \n' + testName)
+        print(message)
         # p.alert(message, 'Test Result', button='OK')
         return (False, message)
     else:
