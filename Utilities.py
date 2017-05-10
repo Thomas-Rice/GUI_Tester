@@ -44,8 +44,10 @@ def openFile():
     # filePathBox = tool.locateCenterOnScreen('filePath Box', testFolder + 'filePath_box.png')
     # p.click(filePathBox[0], filePathBox[1])
 
+    #box is autoselected so we can ctrl + A to highlight it all
+    p.hotkey('ctrl', 'a')
     #Enter the path to the file
-    p.typewrite('GUI_Automation1.nk')
+    p.typewrite(PM_fileToOpen)
     p.press('enter')
 
     #Sleep to wait for the window to open

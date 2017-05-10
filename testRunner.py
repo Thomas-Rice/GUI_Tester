@@ -6,10 +6,9 @@ import sys
 import os
 import glob
 
-# TODO - Run through a list of tests and execute them
 
 tests = []
-importedTests = []
+importedTests = {}
 
 sys.path.append(PM_testUnits)
 
@@ -23,7 +22,7 @@ for filename in glob.glob(PM_testUnits + "*_Test.py"):
 #import all test files
 for file in tests:
     module = importlib.import_module(file)
-    importedTests.append(module)
+    importedTests[file]= module
 
 
 
@@ -40,10 +39,18 @@ def reportTestRun():
     #TODO - Report the results of all the tests
     pass
 
+def run():
+    #Run all the tests in the sequence
+    for i in tests:
+        testToRun = baseTest.baseTest(importedTests[i])
+        runExecutionStack(testToRun)
 
-# #Run all the tests in the sequence
-for i in range(0, len(tests)):
-    testToRun = baseTest.baseTest(importedTests[i])
-    runExecutionStack(testToRun)
-#
-#
+def test():
+    print('yo')
+
+
+def returnTestObjects():
+    return importedTests
+
+if __name__== '__main__':
+    run()

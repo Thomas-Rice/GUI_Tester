@@ -84,6 +84,3 @@ def guiTest():
     p.keyUp('ctrl')
     p.keyUp('alt')
 
-
-def test():
-    print('hi')
