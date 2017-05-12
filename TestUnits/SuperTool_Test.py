@@ -13,7 +13,11 @@ class SuperTool_Test(baseTest):
         self.UMT = UserMatchesTool_Test()
 
     def execute(self):
+        #TODO  - Issue here is that C_CameraSolver is selected. So it will not recognise it.
         self.CT.execute()
+        print('Run CT')
         self.HT.execute()
+        print('Run HT')
         self.UMT.execute()
+        print('Run UMT')
 
