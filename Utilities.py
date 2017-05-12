@@ -30,7 +30,7 @@ def closeApplication(X = 1887, Y = 8):
 
 def checkApplicationIsOpen():
     appIsOpen = tool.locateCenterOnScreen('NukeFileMenu', testFolder + 'File_Menus_Open_Check.png')
-
+    isWarningPopupOpen(True)
 
 def openFile():
     # click in the script editor
