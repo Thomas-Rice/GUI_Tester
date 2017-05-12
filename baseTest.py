@@ -4,9 +4,10 @@ import Evaluation as EV
 import Utilities as UT
 
 
-class baseTest():
-    def __init__(self, testCommands):
-        self.testCommands = testCommands
+class baseTest(object):
+    def __init__(self):
+        # self.testCommands = testCommands
+        pass
 
     def setup(self):
         UT.openApplication()
@@ -15,8 +16,6 @@ class baseTest():
         UT.openFile()
         time.sleep(5)
 
-    def execute(self):
-        self.testCommands.guiTest()
 
     def evaluate(self, test, refBBOX):
         EV.captureViewer()

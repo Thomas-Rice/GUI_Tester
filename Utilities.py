@@ -1,9 +1,9 @@
-import pyautogui as p
-import ExceptionWrappedTools as tool
-from paths_and_messages import *
-
 import time
 
+import pyautogui as p
+
+import ExceptionWrappedTools as tool
+from paths_and_messages import *
 
 testFolder = PM_testFolder
 screenSize = p.size()

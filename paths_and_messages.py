@@ -7,5 +7,6 @@ PM_fileToOpen = PM_testFolder + 'GUI_Automation1.nk'
 PM_bboxes = {
     'HorizonTool_Test'      :(328, 162, 689, 345),
     'CamerasTool_Test'      :(330, 161, 684, 344),
-    'UserMatchesTool_Test'  :(48, 134, 1244, 423)
+    'UserMatchesTool_Test'  :(48, 134, 1244, 423),
+    'SuperTool_Test'        :(48, 134, 1244, 423)
 }

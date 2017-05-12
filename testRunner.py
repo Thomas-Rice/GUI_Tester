@@ -1,4 +1,3 @@
-import baseTest
 import importlib
 from paths_and_messages import *
 
@@ -22,8 +21,8 @@ for filename in glob.glob(PM_testUnits + "*_Test.py"):
 
 #import all test files
 for file in tests:
-    module = importlib.import_module(file)
-    importedTests[file]= module
+    module = getattr(importlib.import_module(file), file)
+    importedTests[file]= module()
 
 
 
@@ -43,7 +42,8 @@ def reportTestRun():
 def run():
     #Run all the tests in the sequence
     for i in tests:
-        testToRun = baseTest.baseTest(importedTests[i])
+        print(importedTests[i])
+        testToRun = importedTests[i]
         runExecutionStack(testToRun, i)
         time.sleep(5)
 
