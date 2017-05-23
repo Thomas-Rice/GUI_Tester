@@ -29,7 +29,7 @@ for file in tests:
 
 #Stack of functions to call from baseTest
 def runExecutionStack(testObject, testName):
-    testObject.setup()
+    # testObject.setup()
     testObject.execute()
     testObject.evaluate(testName, PM_bboxes[testName])
     testObject.tearDown()

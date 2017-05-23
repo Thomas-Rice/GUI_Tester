@@ -1,5 +1,5 @@
-PM_testFolder = 'C:\\Users\\thomas.rice\\PycharmProjects\\GUI_Tester\\Test_Images\\'
-PM_testUnits = 'C:\\Users\\thomas.rice\\PycharmProjects\\GUI_Tester\\TestUnits\\'
+PM_testFolder = 'C:\\Users\\twr_000\\PycharmProjects\\test\\GUI_Tester\\Test_Images_Home\\'
+PM_testUnits = 'C:\\Users\\twr_000\\PycharmProjects\\test\\GUI_Tester\\TestUnits\\'
 PM_fileToOpen = PM_testFolder + 'GUI_Automation1.nk'
 
 #TODO - maybe a better implentation of this?

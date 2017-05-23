@@ -10,14 +10,14 @@ screenSize = p.size()
 
 # X = 960, Y = 1420
 # X = 641, Y = 1066
-def openApplication(X = 641, Y = 1066):
+def openApplication(X = 960, Y = 1420):
     # TODO  check all the locations of the Nuke symbol - if there is more than one then require corods. If not then use the locateCenter func
     p.click(X, Y, 2, 0.1)
 
 
 # X = 3408, Y = 18
 # X = 1887, Y = 8
-def closeApplication(X = 1887, Y = 8):
+def closeApplication(X = 3408, Y = 18):
     #Click the Close Button
     p.click(X, Y)
 
@@ -32,22 +32,16 @@ def checkApplicationIsOpen():
     appIsOpen = tool.locateCenterOnScreen('NukeFileMenu', testFolder + 'File_Menus_Open_Check.png')
     isWarningPopupOpen(True)
 
-def openFile():
+def openFile(fileToOpen):
     # click in the script editor
     p.click(screenSize[0], screenSize[1] - 100)
     #open the hotkey window
     p.hotkey('ctrl', 'o')
 
-    # Dont need to click on the filePath box as it's already selected
-    # 850, 660
-    # Click on the file path input box
-    # filePathBox = tool.locateCenterOnScreen('filePath Box', testFolder + 'filePath_box.png')
-    # p.click(filePathBox[0], filePathBox[1])
-
     #box is autoselected so we can ctrl + A to highlight it all
     p.hotkey('ctrl', 'a')
     #Enter the path to the file
-    p.typewrite(PM_fileToOpen)
+    p.typewrite(fileToOpen)
     p.press('enter')
 
     #Sleep to wait for the window to open
