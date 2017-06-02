@@ -5,8 +5,10 @@ PM_fileToOpen = PM_testFolder + 'GUI_Automation1.nk'
 #TODO - maybe a better implentation of this?
 #bboxes for evaluation
 PM_bboxes = {
-    'HorizonTool_Test'      :(328, 162, 689, 345),
-    'CamerasTool_Test'      :(330, 161, 684, 344),
-    'UserMatchesTool_Test'  :(48, 134, 1244, 423),
-    'SuperTool_Test'        :(48, 134, 1244, 423)
+    'HorizonTool_Test'      :(666, 179, 1032, 521),
+    'CamerasTool_Test'      :(666, 179, 1032, 521),
+    'UserMatchesTool_Test'  :(666, 179, 1032, 521),
+    'SuperTool_Test'        :(80, 134, 2237, 610)
 }
+
+# PM_screenShotBBox = (666, 179, 1032, 521)

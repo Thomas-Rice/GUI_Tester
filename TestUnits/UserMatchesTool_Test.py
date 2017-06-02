@@ -35,10 +35,10 @@ class UserMatchesTool_Test(baseTest):
         userMatchesButtonLocation = tool.locateCenterOnScreen('User Match Button' ,self.testFolder + 'userMatches_icon.png')
 
         #check to see if we are roughly in the correct area to click on.
-        if ((self.screenSize[0] * 0.03) <= userMatchesButtonLocation[0] <= (self.screenSize[0]*0.035)):
-            p.click(userMatchesButtonLocation[0], userMatchesButtonLocation[1], clicks=1, interval=0, button='left')
-        else:
-            print('Cannot click on the userMatch tool, maybe it has already been clicked on?')
+        # if ((self.screenSize[0] * 0.03) <= userMatchesButtonLocation[0] <= (self.screenSize[0]*0.035)):
+        p.click(userMatchesButtonLocation[0], userMatchesButtonLocation[1], clicks=1, interval=0, button='left')
+        # else:
+        #     print('Cannot click on the userMatch tool, maybe it has already been clicked on?')
 
     def clickAndDrag(self):
         #Hold down Ctrl + Alt

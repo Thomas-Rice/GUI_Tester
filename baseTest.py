@@ -28,14 +28,14 @@ class baseTest(object):
 
 
     def evaluate(self, test, refBBOX):
-        EV.captureViewer()
+        EV.captureViewer(test, refBBOX)
         bbox = EV.getFinalImageBBOX(test)
         # print(bbox)
         EV.evaluate(bbox, refBBOX, test)
         # (328, 162, 689, 345)
 
-    def tearDown(self):
-        UT.closeApplication()
+    def tearDown(self, message):
+        UT.closeApplication(message)
 
     def clickCameraSolver(self):
         cameraSolverLocation = tool.locateCenterOnScreen('CameraSolver', self.testFolder + 'C_CameraSolver.png')

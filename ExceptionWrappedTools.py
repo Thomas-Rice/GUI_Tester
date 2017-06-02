@@ -18,7 +18,7 @@ def locateOnScreen(imageName, imagePath, popup = False):
 '''this function might not be needed '''
 def analyseResult(result, imageName, isPopup = False):
     if result is None and not isPopup:
-        raise Exception(imageName + ' --> locateOnScreen returned None therefore could not match the reference')
+        raise Exception('Final Image Comparison Failed')
     else:
         assert isinstance(result, object)
         return result

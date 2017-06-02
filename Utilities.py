@@ -17,7 +17,9 @@ def openApplication(X = 960, Y = 1420):
 
 # X = 3408, Y = 18
 # X = 1887, Y = 8
-def closeApplication(X = 3408, Y = 18):
+def closeApplication(message):
+    X = 3408
+    Y = 18
     #Click the Close Button
     p.click(X, Y)
 
@@ -26,6 +28,9 @@ def closeApplication(X = 3408, Y = 18):
 
     #Check if a save before close window is there
     isWarningPopupOpen(True)
+
+    print(message)
+
 
 
 def checkApplicationIsOpen():
@@ -61,7 +66,7 @@ def isWarningPopupOpen(no = None):
             p.click(noButton[0], noButton[1])
         # if yes:
         #     p.click(yesButton[0], yesButton[1])
-    else:
-        print('No Popup window detected - this is likely fine')
+    # else:
+    #     print('No Popup window detected - this is likely fine')
 
 
