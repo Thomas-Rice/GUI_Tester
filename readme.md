@@ -1,7 +1,13 @@
-# Selenium Testing with Behave in Python
+# Pyautogui based UI testing framework 
 
 
-To get started, we'll need to ensure that Behave is installed. The easiest means of doing so is with Pip:
+To get started, we'll need to ensure that pyautogui is installed. The easiest means of doing so is with Pip:
+
+Follow the link below to find out OS specific install instructions:
+https://pyautogui.readthedocs.io/en/latest/install.html
+
+
+We'll need to ensure that Behave is installed. The easiest means of doing so is with Pip:
 
 ```
 pip install Behave
